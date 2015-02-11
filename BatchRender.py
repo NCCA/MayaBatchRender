@@ -47,7 +47,7 @@ class BatchRender(Ui_mainDialog):
 	# a method to popup a file dialog and get the filename
 	def chooseFile(self) :
 		# pop up a dialog to get the maya file
-		self.m_mayaFile=QtGui.QFileDialog.getOpenFileName(None,"Select Maya Scene",".","*.ma; *.mb")
+		self.m_mayaFile=QtGui.QFileDialog.getOpenFileName(None,"Select Maya Scene",".","*")
 		# now set the dialog text field
 		self.m_ui.m_fileName.setText(self.m_mayaFile)
 
