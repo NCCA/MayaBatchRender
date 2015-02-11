@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainDialog</class>
+ <widget class="QDialog" name="mainDialog">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>484</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Maya Batch Render GUI</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLineEdit" name="m_fileName">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="m_chooseFile">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Choose File</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QGroupBox" name="s_renderControlGroupBox">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Render Controls</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="s_gridLayoutGroupBox">
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="m_startFrame">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximum">
+           <number>99999</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="s_byFrame">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>by Frame</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="s_endFrame">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>End Frame</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QSpinBox" name="m_endFrame">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximum">
+           <number>999999</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="s_startFrame">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Start Frame</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="s_renderLabel">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Renderer</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QSpinBox" name="m_byFrame">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximum">
+           <number>200</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="6">
+         <widget class="QLabel" name="s_pad">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Pad</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="7">
+         <widget class="QSpinBox" name="m_pad">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximum">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="2">
+         <widget class="QComboBox" name="m_renderer">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string>default</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>mental ray</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Use Render Globals</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Hardware</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Renderman</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Software</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLabel" name="s_filename">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Output filename</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4" colspan="3">
+         <widget class="QLineEdit" name="m_outputFileName">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="7">
+         <widget class="QComboBox" name="m_extension">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>tiff</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>exr</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>iff</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="8">
+         <widget class="QTextEdit" name="m_outputWindow">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="m_chooseProject">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Choose Proj</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="m_projectDir">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="7" column="1">
+    <widget class="QPushButton" name="m_batchRender">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Batch Render</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLineEdit" name="m_outputDir">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="m_chooseOutputDir">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Choose Output Dir</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
