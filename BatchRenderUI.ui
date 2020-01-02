@@ -153,17 +153,12 @@
           </item>
           <item>
            <property name="text">
-            <string>mental ray</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
             <string>Use Render Globals</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Hardware</string>
+            <string>V-Ray</string>
            </property>
           </item>
           <item>
@@ -173,7 +168,7 @@
           </item>
           <item>
            <property name="text">
-            <string>Software</string>
+            <string>Arnold</string>
            </property>
           </item>
          </widget>
