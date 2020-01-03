@@ -37,8 +37,22 @@ class BatchRender(Ui_mainDialog):
 		self.m_process.started.connect(self.updateDebugOutput)
 		self.m_process.error.connect(self.error)
 		self.m_process.finished.connect(self.finished)
+		self.loadEnvironment()
+
+	def loadEnvironment(self) :
+		environment=QProcessEnvironment().systemEnvironment()
 		
-	
+		with open('Environment.txt') as env :
+			lines=env.read().splitlines()
+			for line in lines :
+				line=line.split(' ')
+				print('{} {}'.format(line,len(line)))
+				if len(line) >1 :
+					print('Env Set {} {}'.format(line[0],line[1]))
+					environment.insert(line[0],line[1])
+		print(environment.toStringList())
+		self.m_process.setProcessEnvironment(environment)	
+
 	def error(self) :
 		self.errorDialog('error from process')
 	def finished(self) :
@@ -51,6 +65,7 @@ class BatchRender(Ui_mainDialog):
 		# now set the dialog text field
 		if len(self.m_mayaFile) !=0 :
 			self.m_ui.m_fileName.setText(self.m_mayaFile)
+			print('Maya file set to {}'.format(self.m_mayaFile))
 
 
 # a method to popup a file dialog and get the project directory
@@ -113,7 +128,7 @@ class BatchRender(Ui_mainDialog):
 				if self.m_ui.m_extension.currentIndex()!=0 :
 					extension=' -of %s ' %(self.m_ui.m_extension.currentText())
 
-				sceneData='-proj %s %s' %(self.m_mayaProject,self.m_mayaFile[0])
+				sceneData='-proj %s %s' %(self.m_mayaProject,self.m_mayaFile)
 
 				Renderers={0:'default',1:'file',2:'vray',3:'rman',4:'arnold'}
 				rendererString='-renderer %s ' %(Renderers.get(self.m_ui.m_renderer.currentIndex()))

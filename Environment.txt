@@ -1,0 +1,15 @@
+PIXAR_LICENSE_FILE 9010@talavera.bournemouth.ac.uk
+RMANTREE /opt/pixar/RenderManProServer-22.5
+RSTUDIOTREE /opt/pixar/RenderManProServer-22.5
+MAYA_LOCATION /usr/autodesk/maya
+MAYA_PLUG_IN_PATH /opt/pixar/RenderManForMaya-22.5/plug-ins
+MAYA_SCRIPT_PATH /opt/pixar/RenderManForMaya-22.5/scripts
+PATH /opt/pixar/RenderManProServer-22.5/bin:/opt/pixar/RenderManForMaya-22.5/bin:/usr/bin
+VRAY_FOR_MAYA2019_MAIN /opt/autodesk/maya/vray
+VRAY_FOR_MAYA2019_PLUGINS /opt/autodesk/maya/vray/vrayplugins
+VRAY_AUTH_CLIENT_FILE_PATH /opt
+PYTHONPATH /opt/pixar/RenderManForMaya-22.5/scripts/rfm2:/opt/pixar/RenderManForMaya-22.5/scripts:/opt/autodesk/maya/lib/python2.7/site-packages
+MAYA_MODULE_PATH $MAYA_MODULE_PATH:/opt/pixar/RenderManForMaya-22.5/etc
+
+
+
